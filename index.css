@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;800&display=swap');
+
+/* variables */
+
+:root {
+    --white-prominent: rgba(0, 0, 0, 0.9);
+    --white-overlay: rgba(0, 0, 0, 0.24);
+    --green: #0059ff;
+}
+
+
+/* resets */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: #ffffff;
+    color: rgba(26, 26, 26, 0.7);
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 160%;
+}
+
+.container {
+    max-width: 120rem;
+    margin: auto;
+}
+
+.quote {
+    font-family: monospace;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+h1,
+h2 {
+    margin: 2rem 0;
+    color: var(--white-prominent);
+}
+
+h1 {
+    margin: 4rem 0;
+}
+
+p {
+    padding: 1rem 0;
+}
+
+a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    margin: 5rem 0;
+    max-width: 40rem;
+}
+
+.overlay {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.overlay img {
+    width: 100%;
+    margin: 0;
+    max-width: 1920px;
+    max-height: 50rem;
+}
+
+
+/*  */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50rem;
+}
+
+.hero .left {
+    width: 50%;
+}
+
+.hero .left h1 {
+    font-size: 6rem;
+}
+
+
+/* media query for hero section */
+
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .hero .left {
+        width: 100%;
+    }
+    .hero .right {
+        width: 100%;
+    }
+    .hero .left h1 {
+        height: auto;
+        padding: 3rem;
+        line-height: normal;
+        margin: 0;
+    }
+}
+
+.discussion {
+    display: flex;
+}
+
+.discussion .left {
+    padding-right: 3rem;
+    width: 50%;
+}
+
+.discussion .right {
+    width: 50%;
+    padding-left: 3rem;
+}
+
+
+/* media query for discussion section */
+
+@media screen and (max-width: 768px) {
+    .discussion {
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .discussion .left {
+        padding-right: 0rem;
+        width: 100%;
+    }
+    .discussion .right {
+        padding-left: 0rem;
+        width: 100%;
+        margin-top: 5rem;
+    }
+}
+
+.hero .right img {
+    display: inline-block;
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
+}
+
+
+/* styling the code block */
+
+.code {
+    padding: 2rem;
+    border-radius: 2rem;
+    background: #333;
+    color: white;
+    margin: 5rem 0;
+    border-top: 0.3rem solid var(--green);
+    overflow: auto;
+    max-height: 80rem;
+}
+
+.code code {
+    line-height: 180%;
+}
+
+
+/* time and space complexity */
+
+.time-space {
+    margin: 10rem 0;
+}
+
+.time-space h2 {
+    text-align: center;
+}
+
+.time-space ol {
+    display: flex;
+    margin-top: 5rem;
+    list-style: none;
+    border: 2px solid var(--white-overlay);
+    padding: 2rem;
+}
+
+.time-space ol h3 {
+    color: rgba(22, 22, 22, 0.8);
+}
+
+.time-space ol li {
+    width: 100%;
+}
+
+.time-space ol .left {
+    margin-right: 2rem;
+}
+
+.time-space ol .right {
+    margin-left: 2rem;
+}
+
+
+/* analysis section styles */
+
+.subtitle {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.italica {
+    font-style: italic;
+    text-align: center;
+}
+
+.analysis h2 {
+    text-align: center;
+}
+
+.analysis ol {
+    border: 2px solid var(--white-overlay);
+    padding: 1rem;
+    list-style: none;
+    max-width: 70rem;
+    margin: 3rem auto;
+    border-radius: 2rem;
+    border-top: 2rem solid var(--white-overlay);
+}
+
+.analysis ol li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    border-radius: 1rem;
+}
+
+.analysis ol li:hover {
+    background: var(--white-overlay);
+}
+
+.analysis ol li span {
+    width: 5rem;
+    text-align: right;
+    font-size: 4rem;
+    transition: all 0.3s ease;
+    font-weight: bolder;
+    margin-right: 2rem;
+    color: var(--white-overlay);
+}
+
+.analysis ol li:hover span {
+    color: var(--green);
+}
